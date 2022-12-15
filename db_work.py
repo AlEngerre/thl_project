@@ -26,7 +26,9 @@ def answer_cor(user_id, answer):
     connection.commit()
     if not answ:
         return "no_act"
-    if answ[0] == answer:
+    print(answer)
+    print(answ[0])
+    if str(answ[0]) == str(answer):
         resp = [True, answ[1]]
     else:
         resp = [False, answ[0], answ[1]]
